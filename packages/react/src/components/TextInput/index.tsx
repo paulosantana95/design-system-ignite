@@ -1,5 +1,6 @@
 import { ComponentProps } from 'react'
 import { Input, Prefix, TextInputContainer } from './styles'
+import { MultiStep } from '../MultiStep'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string
@@ -13,3 +14,5 @@ export function TextInput({ prefix, ...props }: TextInputProps) {
     </TextInputContainer>
   )
 }
+
+TextInput.displayName = 'TextInput'
