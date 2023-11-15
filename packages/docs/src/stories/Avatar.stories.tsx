@@ -1,5 +1,5 @@
 import type { StoryObj, Meta } from '@storybook/react'
-import { Avatar, AvatarProps } from '@psa-ignite-ui/react'
+import { Avatar, AvatarProps, Box } from '@psa-ignite-ui/react'
 
 export default {
   title: 'Data display/Avatar',
@@ -15,6 +15,13 @@ export default {
       },
     },
   },
+  decorators: [
+    (Story) => {
+      return (
+        <Box css={{ padding: '$10', background: '$gray800' }}>{Story()}</Box>
+      )
+    },
+  ],
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
