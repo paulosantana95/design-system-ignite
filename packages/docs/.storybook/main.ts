@@ -25,5 +25,12 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
+  viteFinal: (viteConfig, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      // Personalize a configuração do Vite para produção aqui
+      viteConfig.base = '/design-system-ignite/'
+    }
+    return viteConfig
+  },
 }
 export default config
