@@ -1,6 +1,5 @@
 import { ComponentProps, forwardRef, ElementRef } from 'react'
 import { Input, Prefix, TextInputContainer } from './styles'
-import { MultiStep } from '../MultiStep'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
   prefix?: string
